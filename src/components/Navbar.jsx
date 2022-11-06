@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material"
+import { Stack, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
 
 import {logo} from '../utils/constants'
@@ -11,8 +11,11 @@ const Navbar = () => (
     p={2} 
     sx={{position: 'sticky', top: 0, background: '#000', justifyContent:"space-between" }} 
     >
-      <Link to="/" style={{display: "flex", alignItems:"center"}} >
-        <img src={logo} alt="logo" height={45} />
+      <Link to="/" style={{display: "flex", flexDirection: "row" ,alignItems:"center"}} >
+        <img src={logo} alt="logo" height={45}  />
+        <Typography variant="h5" sx={{color: "white", marginLeft: 1}} >
+          Wdaw Media
+        </Typography>
       </Link>
       <SearchBar/>
       
